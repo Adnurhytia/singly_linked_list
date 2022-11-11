@@ -54,7 +54,13 @@ namespace singly_linked_list
                     Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
                 }
+                previous = current;
+                current = current.next;
             }
+            //* Once the above for loop is executed, prev and current are positioned in such a way that the position for the new node*/
+            newnode = current;
+            previous.next = newnode;
         }
+
     }
 }
